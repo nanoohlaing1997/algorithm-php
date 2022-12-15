@@ -27,7 +27,6 @@ function twoSum(array $num, int $target)
 
 // $num  = [1, 24, 14, 53, 21];
 // $target = 22;
-$num = explode(' ', readline("Enter number array: "));
+$num = explode(',', readline("Enter number array: "));
 $target = (int)readline("Enter target number: ");
 twoSum($num, $target);
-

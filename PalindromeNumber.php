@@ -10,6 +10,7 @@ function isPalindrome(int $n)
 	// $n == strrev($n) ? true : false;
 
 
+	// palindrome number is 1221 = 1221
 	// math solution
 	// $n = 123
 	$s = 0;
