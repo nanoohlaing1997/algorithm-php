@@ -1,0 +1,19 @@
+{
+	"name": "Go Development",
+	"dockerFile": "Dockerfile",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go",
+				"bmewburn.vscode-intelephense-client",
+				"streetsidesoftware.code-spell-checker"
+			],
+			"settings": {
+				"intelephense.environment.php7": "/usr/local/bin/php", // Path to PHP 7
+				"intelephense.environment.php8": "/usr/local/bin/php", // Path to PHP 8
+				"intelephense.environment.php": "/usr/local/bin/php", // Path to PHP (default)
+				"php.validate.executablePath": "/usr/local/bin/php"
+			}
+		}
+	}
+}
