@@ -30,3 +30,20 @@ function twoSum(array $num, int $target)
 $num = explode(',', readline("Enter number array: "));
 $target = (int)readline("Enter target number: ");
 twoSum($num, $target);
+
+function twoSumNew(array $num, int $target) {
+    $r = [];
+
+    // target = left + right
+    // left = target - right
+    foreach ($num as $key => $value) {
+        if (!isset($r[$value])) {
+            $r[$value] = $key;
+        }
+
+        $complement = $target - $value;
+        if (isset($result[$complement]) && $r[$complement] != $key) {
+            $f = [$r[$complement], $key];
+        }
+    }
+}

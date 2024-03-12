@@ -10,13 +10,13 @@ function runningSum(array $nums) {
 	return $result;
 }
 
-$inputArrayNumber = explode(',', readLine("Enter Your Array Numbers for running sum: "));
-if (is_array($inputArrayNumber)) {
-	$result = runningSum($inputArrayNumber);
-} else {
-	print ("Your input is not array, please input array numbers");
-    $inputArrayNumber = readLine("Enter Your Array Numbers for running sum: ");
-}
-// $nums = [1, 2, 3, 4, 5];
-// $result = runningSum($nums);
+// $inputArrayNumber = explode(',', readLine("Enter Your Array Numbers for running sum: "));
+// if (is_array($inputArrayNumber)) {
+// 	$result = runningSum($inputArrayNumber);
+// } else {
+// 	print ("Your input is not array, please input array numbers");
+//     $inputArrayNumber = readLine("Enter Your Array Numbers for running sum: ");
+// }
+$nums = [1, 2, 3, 4, 5];
+$result = runningSum($nums);
 print_r($result);

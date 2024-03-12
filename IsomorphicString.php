@@ -1,6 +1,6 @@
 <?php
 
-function isIsomorphicString(string $fistString, string $secondString) {
+function isIsomorphicString(string $firstString, string $secondString) {
 	// convert string to array
 	$firstArray = str_split($firstString);
 	$secondArray = str_split($secondString);
