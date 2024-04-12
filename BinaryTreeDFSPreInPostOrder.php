@@ -60,7 +60,7 @@ function DepthFirstSearchPreOrder($root)
 function DepthFirstSearchInOrder($root)
 {
 	$result = [];
-	$stack = [];
+	$stack = []; // a, b , d
 	$current = $root;
 	while ($current !== null || count($stack) > 0) {
         while ($current !== null) {

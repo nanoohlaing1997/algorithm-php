@@ -31,7 +31,7 @@ $c->left = $f;
             //  d      e f
 print_r(BreadthFirstSearchWithQueue($a));
 
-function BreadthFirstSearchWithQueue($root)
+function BreadthFirstSearchWithQueue($root) // First in First out
 {
 	if ($root === null) {
 		return [];
