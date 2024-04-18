@@ -43,7 +43,8 @@ function BreadthFirstSearchWithQueue($root) // First in First out
 		$current = array_pop($queue);
 		$result[] = $current->val;
 
-		if ($current->left) {
+		if ($current->left)
+		{
 			array_unshift($queue, $current->left);
 		}
 
