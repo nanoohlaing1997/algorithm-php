@@ -90,11 +90,11 @@
 // 		return false;
 // 	}
 
-// 	for ($i = 0; $i < strlen($t); $i++) {
-// 		if (!isset($sArray[$t[$i]]) || !isset($tArray[$t[$i]]) || $sArray[$t[$i]] != $tArray[$t[$i]]) {
-// 			return false;
-// 		}
+// for ($i = 0; $i < strlen($t); $i++) {
+// 	if (!isset($sArray[$t[$i]]) || !isset($tArray[$t[$i]]) || $sArray[$t[$i]] != $tArray[$t[$i]]) {
+// 		return false;
 // 	}
+// }
 
 // 	return $sArray;
 // }
@@ -227,7 +227,7 @@
 
 // 	$slow = $head;
 // 	$fast = $head;
-// 	while ($fast != null && $slow != null) {
+// 	while ($fast != null && $slow != null && $fast->next != null) {
 // 		$slow = $slow->next;
 // 		$fast = $fast->next->next;
 // 		if ($slow === $fast) {
@@ -445,7 +445,7 @@
 
 // function check($left, $right)
 // {
-// 	if ($left === null || $right === null) {
+// 	if ($left === null || $ === null) {
 // 		return $left == $right;
 // 	}
 
@@ -619,24 +619,132 @@
 // }
 // print_r(kidsWithCandies([2,3,5,1,3], 3));
 
-function reverseVowels($s)
-{
-	$vowels = [
-		"a",
-		"e",
-		"i",
-		"o",
-		"u"
-	];
-	$len = strlen($s);
-	$temp = [];
-	for ($i = 0; $i < $len; $i++)
-	{
-		if (isset($vowels[$s[$i]])) {
-			if (is_emp
-			)
-		}
-	}
-}
+// function longestCommonPrefix($strs) {
+// 	if (empty($strs)) {
+// 		return false;
+// 	}
+// 	$prefixStr = $strs[0];
 
-print_r(reverseVowels("hello"));
+// 	for ($i = 1; $i < count($strs); $i++) {
+// 		$currentStr = $strs[$i];
+// 		$j = 0;
+// 		while ($j < strlen($currentStr) && $j < strlen($prefixStr) && $currentStr[$j] == $prefixStr[$j]) {
+// 			$j++;
+// 		}
+// 		$prefixStr = substr($prefixStr, 0, $j);
+// 		if ($prefixStr === "") {
+// 			break;
+// 		}
+// 	}
+// 	return $prefixStr;
+// }
+
+// print_r(longestCommonPrefix(["ab", "a"]));
+
+// function isPalindrome($s) {
+// 	if ($s == " ") {
+// 		return true;
+// 	}
+
+//     $s = preg_replace("/[^a-z0-9]+/", "", strtolower($s));
+// 	$i = 0;
+// 	$j = strlen($s) - 1;
+// 	while ($i < $j) {
+// 		if ($s[$i] != $s[$j]) {
+// 			return false;
+// 		}
+// 		$i++;
+// 		$j--;
+// 	}
+// 	return true;
+// }
+
+// print_r(isPalindrome("A man, a plan, a canal: Panama"));
+
+// function canConstruct($ransomNote, $magazine) {
+// 	$magazineChars = [];
+// 	for ($j = 0; $j < strlen($magazine); $j++) {
+// 		if (isset($magazineChars[$magazine[$j]])) {
+// 			$magazineChars[$magazine[$j]]++;
+// 		} else {
+// 			$magazineChars[$magazine[$j]] = 1;
+// 		}
+// 	}
+
+// 	for ($i = 0; $i < strlen($ransomNote); $i++) {
+// 		if (!isset($magazineChars[$ransomNote[$i]]) || $magazineChars[$ransomNote[$i]] == 0) {
+// 			return false;
+// 		} else {
+// 			$magazineChars[$ransomNote[$i]]--;
+// 		}
+// 	}
+// 	return true;
+// }
+
+// print_r(canConstruct("aa", "ab"));
+
+// function wordPattern($pattern, $s) {
+// 	$sArray = explode(" ", $s); // ["dog", "cat", "cat", "dog"]
+// 	if (count($sArray) != strlen($pattern)) {
+// 		return false;
+// 	}
+
+// 	$map = [];
+// 	for ($i = 0; $i < strlen($pattern); $i++) {
+// 		if (isset($map[$pattern[$i]])) {
+// 			if ($map[$pattern[$i]] != $sArray[$i]) {
+// 				return false;
+// 			}
+// 		} else {
+// 			if (in_array($sArray[$i], $map)) {
+// 				return false;
+// 			}
+// 			$map[$pattern[$i]] = $sArray[$i];
+// 		}
+// 	}
+// 	return true;
+// }
+
+// print_r(wordPattern("abba", "dog cat cat dog"));
+
+// a = {
+// 	"name": "John Wick",
+// 	"experience": [
+// 	  {
+// 		"company": "Google",
+// 		"years": 5
+// 	  },
+// 	  {
+// 		"company": "Microsoft",
+// 		"years": 5
+// 	  }
+// 	]
+//   }
+
+// function check ($a, $b)
+// {
+// 	$aJsonArray = json_decode($a, true);
+// 	$bJsonArray = json_decode($b, true);
+
+// 	$keysA = array_keys($aJsonArray);
+// 	$keysB = array_keys($bJsonArray);
+
+// 	if ($keysA !== $keysB) {
+// 		return false;
+// 	}
+// 	return true;
+// }
+
+function rotate(&$nums, $k)
+{
+	$result = [];
+	for ($i = 0; $i < count($nums); $i ++) {
+		$index = $i + $k;
+		if ($index >= count($nums)) {
+			$index = ($i + $k) % count($nums);
+		}
+		$result[$index] = $nums[$i];
+	}
+	return $result;
+}
+print_r(rotate([1,2,3,4,5,6,7], 3));
